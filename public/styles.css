@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #35424a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: #FFA500 3px solid;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    background-color: #FFA500;
+    overflow: hidden;
+    width: 100%; /* Делаем панель навигации на всю ширину экрана */
+}
+
+nav ul li {
+    display: inline-block; /* Изменение отображения элементов списка */
+    margin: 20px; /* Добавление отступов вокруг элементов списка */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; /* Добавление отступов вокруг ссылок */
+    border-radius: 15px; /* Добавление скругленных углов к ссылкам */
+    background-color: #35424a; /* Добавление фона к ссылкам */
+}
+
+nav ul li a:hover {
+    background-color: #f4f4f4;
+    color: black; /* Изменение цвета фона при наведении */
+}
+
+main {
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #35424a;
+    color: white;
+    border-top: #FFA500 3px solid;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* По умолчанию модальное окно скрыто */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.modal-content {
+    background-color: #fff; /* Цвет фона модального окна */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 15px; /* Скругленные углы */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для формы в модальном окне */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    transition: all 0.3s ease; /* Добавление плавности */
+}
+
+form input[type="submit"], form button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #35424a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Добавление плавности */
+}
+
+form input[type="submit"]:hover, form button:hover {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+/* Стили для блока опросов */
+#surveys {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Стили для каждого отдельного опроса */
+#surveys div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Стили для вопроса опроса */
+#surveys h3 {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+
+/* Стили для вариантов ответа */
+#surveys label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Стили для радиокнопок */
+#surveys input[type="radio"] {
+    margin: 0;
+}
+
+/* Стили для кнопки голосования */
+#surveys button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#surveys button:hover {
+    background-color: #0056b3;
+}

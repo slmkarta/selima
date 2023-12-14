@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн-опросы</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на наш сайт для онлайн-опросов!</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="openModal()">Создать опрос</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="surveys">
+            <h2>Последние опросы</h2>
+            <!-- Здесь будет список последних опросов -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Онлайн-опросы</p>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <form action="/addSurvey" method="post" id="surveyForm">
+                <label for="question">Вопрос опроса:</label><br>
+                <input type="text" id="question" name="question"><br>
+                <label for="option1">Вариант ответа 1:</label><br>
+                <input type="text" id="option1" name="option1" class="option"><br>
+                <label for="option2">Вариант ответа 2:</label><br>
+                <input type="text" id="option2" name="option2" class="option"><br>
+                <label for="image">Ссылка на картинку:</label><br> <!-- Новое поле ввода -->
+                <input type="text" id="image" name="image"><br>
+                <button type="button" id="addButton" onclick="addOption()">Добавить вариант ответа</button><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script src="modal.js"></script>
+    <script src="loadSurveys.js"></script>
+</body>
+</html>
